@@ -10,7 +10,7 @@ local X = Material.Load({
 		MainFrame = Color3.fromRGB(35,35,35)
 	}
 })
-
+ 
 local Y = X.New({
 	Title = "Main"
 })
@@ -56,6 +56,20 @@ local D = Y.Dropdown({
 		"Start Dataloss",
 		"Undo Dataloss"
 	}
+})
+
+local AE = Y.Button({
+	Text = "https://discord.gg/8XJZKW5hAq",
+	Callback = function()
+		print("https://discord.gg/8XJZKW5hAq")
+	end
+})
+
+local AE2 = Y.Button({
+	Text = "Copy Discord Invite",
+	Callback = function()
+		setclipboard("https://discord.gg/8XJZKW5hAq")
+	end
 })
 
 getgenv().TextField = Y.TextField({
