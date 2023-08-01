@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-    Title = "AFS - realzhy.",
+    Title = "AFS - zhyk.",
     Style = 3,
     SizeX = 500,
     SizeY = 350,
@@ -57,16 +57,16 @@ local D = Y.Dropdown({
 })
 
 local AE = Y.Button({
-    Text = "fuck the boss",
+    Text = "https://discord.gg/EK",
     Callback = function()
-        print("OwO")
+        print("https://discord.gg/")
     end
 })
 
 local AE2 = Y.Button({
     Text = "Copy Discord Invite",
     Callback = function()
-        setclipboard("fuck the boss")
+        setclipboard("httpsdiscord.")
     end
 })
 
