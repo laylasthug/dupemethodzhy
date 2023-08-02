@@ -1,13 +1,13 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-    Title = "AFS - zhyk.",
-    Style = 3,
-    SizeX = 500,
-    SizeY = 350,
+    Title = "AFS - laylazh.",
+    Style = 1,
+    SizeX = 350,
+    SizeY = 200,
     Theme = "Dark",
     ColorOverrides = {
-        MainFrame = Color3.fromRGB(35,35,35)
+        MainFrame = Color3.fromRGB(0,0,0)
     }
 })
 
@@ -21,7 +21,7 @@ local A = Y.Button({
         if Type == "Start Dataloss" then
                     local args = {
                         [1] = {
-                            [string.rep("9", 4200000)] = require(game.ReplicatedStorage.ModuleScripts.LocalDairebStore).GetStoreProxy("GameData"):GetData("Pets")[1].UID
+                            ["1\0" .. string.rep("B", 4200000)] = require(game.ReplicatedStorage.ModuleScripts.LocalDairebStore).GetStoreProxy("GameData"):GetData("Pets")[1].UID
                         },
                         [2] = "AFS_Is_Dogshit",
                         [3] = 3
@@ -57,16 +57,16 @@ local D = Y.Dropdown({
 })
 
 local AE = Y.Button({
-    Text = "https://discord.gg/EK",
+    Text = "https://discord.gg/dTRRf2SMc4",
     Callback = function()
-        print("https://discord.gg/")
+        print("https://discord.gg/dTRRf2SMc4")
     end
 })
 
 local AE2 = Y.Button({
     Text = "Copy Discord Invite",
     Callback = function()
-        setclipboard("httpsdiscord.")
+        setclipboard("https://discord.gg/dTRRf2SMc4")
     end
 })
 
