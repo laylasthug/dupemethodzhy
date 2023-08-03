@@ -1,10 +1,10 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-    Title = "AFS - laylazh.",
+    Title = "AFS - reazhy.",
     Style = 1,
-    SizeX = 350,
-    SizeY = 200,
+    SizeX = 450,
+    SizeY = 250,
     Theme = "Dark",
     ColorOverrides = {
         MainFrame = Color3.fromRGB(0,0,0)
@@ -12,24 +12,24 @@ local X = Material.Load({
 })
 
 local Y = X.New({
-    Title = "Main"
+    Title = "Principal"
 })
 
 local A = Y.Button({
-    Text = "You have not selected any Dataloss Type",
+    Text = "Você não selecionou nenhum tipo de dataloss",
     Callback = function()
-        if Type == "Start Dataloss" then
+        if Type == "Começar Dataloss" then
                     local args = {
                         [1] = {
                             ["1\0" .. string.rep("B", 4200000)] = require(game.ReplicatedStorage.ModuleScripts.LocalDairebStore).GetStoreProxy("GameData"):GetData("Pets")[1].UID
                         },
-                        [2] = "AFS_Is_Dogshit",
+                        [2] = "AFS_Is_Shit",
                         [3] = 3
                     }
 
                     game:GetService("ReplicatedStorage").Remote.SaveTeam:FireServer(unpack(args))
-            TextField:SetText("Started")
-        elseif Type == "Undo Dataloss" then
+            TextField:SetText("Começou")
+        elseif Type == "Desfazer Dataloss" then
             for i,v in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.Pets.TeamsList.Main.Scroll:GetDescendants()) do
                 if v.Name == "TeamName" and v.Text == "AFS_Is_Dogshit" then
                     local args = {
@@ -37,7 +37,7 @@ local A = Y.Button({
                     }
 
                     game:GetService("ReplicatedStorage").Remote.DeleteTeam:FireServer(unpack(args))
-                    TextField:SetText("Undone")
+                    TextField:SetText("Desfeito")
                     break
                 end
             end
@@ -46,13 +46,13 @@ local A = Y.Button({
 })
 
 local D = Y.Dropdown({
-    Text = "Dataloss Type",
+    Text = "Tipo de Dataloss",
     Callback = function(Value)
         getgenv().Type = Value
     end,
     Options = {
-        "Start Dataloss",
-        "Undo Dataloss"
+        "Começar Dataloss",
+        "Desfazer Dataloss"
     }
 })
 
@@ -64,7 +64,7 @@ local AE = Y.Button({
 })
 
 local AE2 = Y.Button({
-    Text = "Copy Discord Invite",
+    Text = "Copiar Discord Invite",
     Callback = function()
         setclipboard("https://discord.gg/dTRRf2SMc4")
     end
